@@ -20,27 +20,26 @@ export default class Slider extends Component {
             list: [...prevState.list, ...response.data],
             loader: false,
             active: this.state.active + 1
-
         }))
     }
     onclickHander = (index) => {
         if (this.state.list.length === index + 1) {
             this.setState({ page: this.state.page + 1 })
             this.fetchdata(5 + "&page=" + this.state.page);
-        }else{
-             this.setState({
-            active: this.state.active + 1
-        })
-        }       
+        } else {
+            this.setState({
+                active: this.state.active + 1
+            })
+        }
     }
     render() {
-        const { active, list, page, loader } = this.state;
+        const { active, list, loader } = this.state;
         return (
             <div id='carousel ' className='container rounded mt-1 '>
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                     {/* loader */}
                     {loader ? <div className='h6 mx-1 bg-light d-flex align-items-center justify-content-center'>
-                    <span className="spinner-border text-primary mx-1" role="status"/>                    
+                        <span className="spinner-border text-primary mx-1" role="status" />
                         Loading.....</div> : null}
                     {/* images */}
                     <div className="carousel-inner">
@@ -67,7 +66,7 @@ export default class Slider extends Component {
                         type="button"
                         data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="next"
-                        onClick={() => {                           
+                        onClick={() => {
                             this.onclickHander(active)
                         }}>
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
