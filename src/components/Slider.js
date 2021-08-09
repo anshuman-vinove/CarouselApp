@@ -40,7 +40,7 @@ export default class Slider extends Component {
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                     {/* loader */}
                     {loader ? <div className='h6 mx-1 bg-light d-flex align-items-center justify-content-center'>
-                    <span class="spinner-border text-primary mx-1" role="status"/>                    
+                    <span className="spinner-border text-primary mx-1" role="status"/>                    
                         Loading.....</div> : null}
                     {/* images */}
                     <div className="carousel-inner">
