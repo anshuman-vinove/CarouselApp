@@ -7,7 +7,7 @@ export default function header() {
             <div className="container">
                 <a className="navbar-brand" href="#">
                 <img className='mx-2' src="logo-main.png" alt="logo" width="50px" height="40px"/>
-                The Slideshow App
+                The Carousel App
                 </a>
             </div>
             </nav>
